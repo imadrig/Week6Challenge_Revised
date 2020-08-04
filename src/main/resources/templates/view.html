@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employees by Department</title>
+    <div th:replace="base :: headerfg"></div>
+</head>
+<body>
+<div th:replace="base :: navlinksfg"></div>
+<h4>Employee & Departments</h4>
+
+
+
+<table class = "table">
+    <thead class="thead-light">
+    <th scope="col-3">Last Name</th>
+    <th scope="col-3">First Name</th>
+    <th scope="col-3">Department</th>
+    <th scope="col-3">View Details</th>
+    </thead>
+
+    <tbody>
+    <tr th:each="employee : ${employees}">
+        <td th:text="${employee.lastName}"></td>
+        <td th:text="${employee.firstName}"></td>
+        <td th:text="${employee.department}"></td>
+        <td>
+            <button><a th:href="@{/employeedetails/{id}(id=${employee.id})}">Details</a></button>
+        </td>
+    </tr>
+    </tbody>
+
+</table>
+
+<div th:replace="base :: footerfg"></div>
+</body>
+</html>

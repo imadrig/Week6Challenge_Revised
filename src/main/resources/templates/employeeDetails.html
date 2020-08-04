@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee</title>
+    <div th:replace="base :: headerfg"></div>
+</head>
+<body>
+<div th:replace="base :: navlinksfg"></div>
+
+<h4>Employee Details</h4>
+
+Name: [[${employee.firstName}]] [[${employee.lastName}]]
+<br>
+Email: [[${employee.email}]]
+<br>
+Department: [[${employee.department}]]
+<br>
+Job Title: [[${employee.jobTitle}]]
+<br>
+Department: [[${employee.department}]]
+<br>
+<br>
+<a th:href="@{/view}">Back</a>
+
+<div th:replace="base :: footerfg"></div>
+</body>
+</html>

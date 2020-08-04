@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <div th:replace="base :: headerfg"></div>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<div th:replace="base :: navlinksfg"></div>
+
+<h2>Welcome to Sterling Solutions, Inc.</h2>
+
+<p class="message" th:if="${message}">[[${message}]]</p>
+
+<div class="logoHome">
+    <img th:src="@{/images/SterlingSolutionsLogo.png}">
+</div>
+
+
+<div th:replace="base :: footerfg"></div>
+</body>
+</html>
